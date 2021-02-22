@@ -4,7 +4,32 @@ $(document).ready(function() {
             $('.navbar').addClass("sticky");
         } else {
             $('.navbar').removeClass("sticky");
+        } if (this.scrollY > 500) {
+            $('.scroll-up-btn').addClass("show");
+        } else {
+            $('.scroll-up-btn').removeClass("show");
         }
+    });
+
+    // typing animation script
+    var typed = new Typed(".typing", {
+        strings: ["Developer", "Designer", "Baller", "Photographer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop:true
+    });
+
+        // typing animation script
+    var typed = new Typed(".typing-2", {
+        strings: ["Developer", "Designer", "Baller", "Photographer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop:true
+    });
+
+    // slide-up script
+    $('.scroll-up-btn').click(function () {
+        $('html').animate({ scrollTop: 0 })
     });
 
     // toggle menu/navbar script
